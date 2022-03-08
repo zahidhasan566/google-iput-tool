@@ -1,0 +1,11 @@
+let googleTransliterate = require('google-input-tool');
+
+let sourceText = 'aquifina';
+let inputLanguage = 'bn-t-i0-und';
+let maxResult = 12;
+let request = new XMLHttpRequest();
+
+googleTransliterate(request, sourceText, inputLanguage, maxResult)
+.then(function(response) {
+    console.log('Transliterated Text: ', response);
+});
